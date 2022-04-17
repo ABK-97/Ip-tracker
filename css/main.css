@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+
+header {
+  background-image: url(../images/pattern-bg.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 1.3rem;
+}
+
+header .input-div {
+  width: 60%;
+  margin: auto;
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20%;
+}
+
+header .input-div input {
+  width: 80%;
+  border: none;
+  padding: 0.6rem 0.3rem;
+  font-size: 0.9rem;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+header .input-div input.active::-webkit-input-placeholder {
+  color: red;
+}
+
+header .input-div input.active:-ms-input-placeholder {
+  color: red;
+}
+
+header .input-div input.active::-ms-input-placeholder {
+  color: red;
+}
+
+header .input-div input.active::placeholder {
+  color: red;
+}
+
+header .input-div input:focus {
+  outline: none;
+}
+
+header .input-div .search {
+  background-color: black;
+  width: 20%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+header .info {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+  width: 60%;
+  border-radius: 7px;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2rem;
+  z-index: 99;
+}
+
+header .info div {
+  color: #969696;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+header .info div span {
+  display: block;
+  color: #2b2b2b;
+  font-size: 18px;
+}
+
+main {
+  height: 64.5vh;
+  width: 100%;
+  position: relative;
+  z-index: 98;
+}
+
+main #map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+footer a {
+  color: #3e52a3;
+}
+
+@media (min-width: 1201px) {
+  header {
+    background-size: 100%;
+    padding: 0;
+  }
+  header h1 {
+    margin-bottom: 1.7rem;
+    padding-top: 3rem;
+  }
+  header .input-div {
+    width: 30%;
+    margin-bottom: 0;
+    padding-bottom: 5%;
+  }
+  header .input-div input {
+    width: 95%;
+  }
+  header .input-div .search {
+    width: 15%;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  header .input-div .search:hover {
+    background-color: #969696;
+  }
+  header .info {
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+    width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .info div {
+    width: 25%;
+    padding: 0 10px;
+  }
+  header .info div.location, header .info div.timezone, header .info div.isp {
+    border-left: 1px solid #969696;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header .input-div {
+    margin-bottom: 13.6%;
+  }
+  header .info {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .input-div {
+    margin-bottom: 10%;
+  }
+  header .info {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  header .input-div {
+    margin-bottom: 8%;
+  }
+  header .info {
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+}
+/*# sourceMappingURL=main.css.map */

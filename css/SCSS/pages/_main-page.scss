@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+header{
+    background-image: url(../images/pattern-bg.png);
+    background-size: auto;
+    background-repeat: no-repeat;  
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    h1{
+        color: white;
+        font-size: 1.6rem;
+        margin-bottom: 1.3rem;
+    }
+    .input-div{
+        width: 60%;
+        margin: auto;
+        text-align: start;
+        display: flex;
+        margin-bottom: 20%;
+        input{
+            width: 80%;
+            border: none;
+            padding: 0.6rem 0.3rem;
+            font-size: 0.9rem;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            &.active::placeholder {
+                color: red;
+              }
+            &:focus{
+                outline: none;
+            }
+        }
+        .search{
+            background-color: black;
+            width: 20%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+    }
+    .info{
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        width: 60%;
+        border-radius: 7px;
+        padding: 1.5rem ;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        z-index: 99;
+        div{
+            color: $dark-gray;
+            font-size: 14px;
+            line-height: 1.5rem;
+            span{
+                display: block;
+                color: $very-dark-gray;
+                font-size: 18px;
+            }
+        }
+    }
+}
+main{
+    height: 64.5vh;
+    width: 100%;
+    position: relative;
+    z-index: 98;
+    #map{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+}
+
+footer { 
+    font-size: 14px; 
+    text-align: center; 
+    padding: 0.7rem 0;
+    a{ 
+        color: hsl(228, 45%, 44%); 
+    }
+}
+// --------------------------------------------------Media-large-------------------------------------------------------------
+@include large{
+    header{
+        background-size: 100%;
+        padding: 0;
+        h1{
+            margin-bottom: 1.7rem;
+            padding-top: 3rem;
+        }
+        .input-div{
+            width: 30%;
+            margin-bottom: 0;
+            padding-bottom: 5%;
+            input{
+                width: 95%;
+                
+                
+            }
+            .search{
+                width: 15%;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                &:hover{
+                    background-color: $dark-gray;
+                }
+            }
+        }
+        .info{
+            transform: translate(-50%, -40%);
+            width: 80%;
+            flex-direction: row;
+            justify-content: space-between;
+            div{
+                width: 25%;
+                padding: 0 10px;
+               &.location,&.timezone,&.isp{
+                   border-left: 1px solid $dark-gray;
+
+               }
+
+            }
+        }
+    }
+}
+// ----------------------------------------------------------media-tablet----------------------------------------------------
+@include tablets{
+    header .input-div {
+        margin-bottom: 13.6%;
+    }
+    header .info {
+        transform: translate(-50%, -30%);
+    }
+}
+// -----------------------------------------------------------media-small----------------------------------------------------
+@include small{
+    header .input-div {
+        margin-bottom: 10%;
+    }
+    header .info {
+        transform: translate(-50%, -30%);
+    }
+}
+// ----------------------------------------------------------media-medium----------------------------------------------------
+@include meduim{
+    header .input-div {
+        margin-bottom: 8%;
+    }
+    header .info {
+        transform: translate(-50%, -30%);
+    }
+}
+
